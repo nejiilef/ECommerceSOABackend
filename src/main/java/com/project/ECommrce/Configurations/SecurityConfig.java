@@ -38,6 +38,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests()
                 .requestMatchers("/signup/**").permitAll()
                 .requestMatchers("/login/**").permitAll()
+                .requestMatchers("/api/commande").authenticated()
                 .anyRequest().permitAll() // Toutes les autres requêtes nécessitent une authentification
                 .and()
                 .sessionManagement()
